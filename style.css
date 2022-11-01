@@ -98,6 +98,7 @@ body .container {
 hr {
   border: 0.5px solid hsl(215deg, 32%, 27%);
   border-bottom: transparent;
+  margin-bottom: 1rem;
 }
 
 .maker {
