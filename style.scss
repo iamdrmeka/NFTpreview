@@ -1,19 +1,129 @@
-//color config
 $body-color: hsl(217, 54%, 11%);
-$Very-dark-blue-cardbg: hsl(216, 50%, 16%);
+$card-color: hsl(216, 50%, 16%);
 $very-dark-blue-line: hsl(215, 32%, 27%);
-$White: hsl(0, 0%, 100%);
+$white: hsl(0, 0%, 100%);
 $soft-blue: hsl(215, 51%, 70%);
 $Cyan: hsl(178, 100%, 50%);
 //font config
 $font-style: 'Outfit', sans-serif;
 
-body {
-    background-color: $body-color;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
+body {
+    display: grid;
+    place-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: $body-color;
+    font-family: $font-style;
+}
+
+.container {
+    width: 300px;
+    background-color: $card-color;
+    padding: 1.2rem;
+    border-radius: 0.7rem;
+  
+}
+
+.wrapper-one {
+    width: 100%;
+    height: 55%;
+    margin-bottom: 1.2rem;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;  
+}
+
+.product-name {
+    font-size:1.3rem;
+    color: $white;
+    margin-bottom: 1.2rem;
+}
+
+.product-desc {
+    color: $soft-blue;
+    font-size: 15px;
+    font-weight: 300;
+    // opacity: 0;
+    margin-bottom: 1.2rem;
+}
+
+.product-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+  
+    
+}
+
+.number p {
+    color: $Cyan;
+    margin-left: 4px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.days p {
+    color: $soft-blue;
+    font-size: 13px;
+    margin-left: 4px;
+}
+
+hr {
+ border: 0.5px solid $very-dark-blue-line; 
+ border-bottom: transparent;
+ margin-bottom: 0.7rem;
+}
+
+.maker {
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 30px;
+        border: 1px solid $white;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+
+    p{
+        color: $soft-blue;
+        font-size: 13px;
+        
+        span {
+            color: $white;
+            margin-left: 3px;
+            display: inline-block;
+        }
+    
+    }
+
+
+  
+}
+
+
+@media screen and (max-width: 786px) {
+
+    body {
+        height: auto;
+        padding-top: 4rem;
+    }
+    
+    .container {
+        width: 320px;
+    }
+}
