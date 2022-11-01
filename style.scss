@@ -6,11 +6,13 @@ $soft-blue: hsl(215, 51%, 70%);
 $Cyan: hsl(178, 100%, 50%);
 //font config
 $font-style: 'Outfit', sans-serif;
+$transition: 0.5s ease-in;
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
 
 body {
@@ -20,32 +22,67 @@ body {
     height: 100vh;
     background-color: $body-color;
     font-family: $font-style;
+    transition: $transition;
+
+    .container {
+        width: 300px;
+        background-color: $card-color;
+        padding: 1.2rem;
+        border-radius: 0.7rem;
+      
+    }
 }
 
-.container {
-    width: 300px;
-    background-color: $card-color;
-    padding: 1.2rem;
-    border-radius: 0.7rem;
-  
-}
+
 
 .wrapper-one {
     width: 100%;
     height: 55%;
     margin-bottom: 1.2rem;
+    background-color: $Cyan;
+    border-radius: 9px;  
+    position: relative;
+
+
+    &:hover svg {
+        opacity: 1;
+    }
+
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        opacity: 0;
+        transition: $transition;
+    }
+
+      
+    .image {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;  
+        transition: $transition;
+
+        &:hover{
+            opacity: 0.5;
+        }
+       
+    }
 }
 
-.image {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;  
-}
+
+
 
 .product-name {
     font-size:1.3rem;
     color: $white;
     margin-bottom: 1.2rem;
+    transition: $transition;
+    &:hover {
+        color: $Cyan;
+    }
 }
 
 .product-desc {
@@ -54,43 +91,54 @@ body {
     font-weight: 300;
     // opacity: 0;
     margin-bottom: 1.2rem;
+
+   
 }
 
 .product-detail {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1.2rem;
+    
+    .details{
+        display: flex;
+        align-items: center; 
+    }
 }
 
 .details{
     display: flex;
-    align-items: center;
-  
-    
+    align-items: center; 
 }
 
-.number p {
-    color: $Cyan;
-    margin-left: 4px;
-    font-weight: 600;
-    font-size: 13px;
+.number {
+    p {
+        color: $Cyan;
+        margin-left: 4px;
+        font-weight: 600;
+        font-size: 13px;
+    }
 }
 
-.days p {
-    color: $soft-blue;
-    font-size: 13px;
-    margin-left: 4px;
+.days {
+
+    p {
+        color: $soft-blue;
+        font-size: 13px;
+        margin-left: 4px;
+    }
 }
 
 hr {
  border: 0.5px solid $very-dark-blue-line; 
  border-bottom: transparent;
- margin-bottom: 0.7rem;
+
 }
 
 .maker {
     display: flex;
     align-items: center;
+   
 
     img {
         width: 30px;
@@ -107,11 +155,13 @@ hr {
             color: $white;
             margin-left: 3px;
             display: inline-block;
+            transition: $transition;
+            &:hover {
+                color: $Cyan;
+            }
         }
     
     }
-
-
   
 }
 
