@@ -29,6 +29,7 @@ body .container {
   position: relative;
 }
 .wrapper-one:hover svg {
+  cursor: pointer;
   opacity: 1;
 }
 .wrapper-one svg {
@@ -48,6 +49,7 @@ body .container {
 }
 .wrapper-one .image:hover {
   opacity: 0.5;
+  cursor: pointer;
 }
 
 .product-name {
@@ -58,6 +60,7 @@ body .container {
 }
 .product-name:hover {
   color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
 }
 
 .product-desc {
@@ -123,6 +126,7 @@ hr {
 }
 .maker p span:hover {
   color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 786px) {

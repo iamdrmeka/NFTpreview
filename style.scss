@@ -12,6 +12,7 @@ $transition: 0.5s ease-in;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+ 
     
 }
 
@@ -44,7 +45,9 @@ body {
 
 
     &:hover svg {
+       cursor: pointer;
         opacity: 1;
+
     }
 
     svg {
@@ -66,6 +69,8 @@ body {
 
         &:hover{
             opacity: 0.5;
+            cursor: pointer;
+            
         }
        
     }
@@ -81,6 +86,8 @@ body {
     transition: $transition;
     &:hover {
         color: $Cyan;
+        cursor: pointer;
+        
     }
 }
 
@@ -159,6 +166,7 @@ hr {
             transition: $transition;
             &:hover {
                 color: $Cyan;
+                cursor: pointer;
             }
         }
     
